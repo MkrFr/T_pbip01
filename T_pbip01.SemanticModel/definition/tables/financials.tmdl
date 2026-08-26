@@ -1,0 +1,203 @@
+table financials
+	lineageTag: 3f7ff13f-028c-4537-83c8-e1af96debb02
+
+	measure 'Total Sales' = SUM(financials[Sales])
+		formatString: "€"#,##0;("€"#,##0);"€"0
+		lineageTag: e8a12702-88ef-417d-8153-f725a39eb201
+
+	measure 'Total Gross Sales' = SUM(financials[Gross Sales])
+		formatString: "€"#,##0;("€"#,##0);"€"0
+		lineageTag: 71b3e8c9-5991-4df2-bc8e-90924976c202
+
+	measure 'Total COGS' = SUM(financials[COGS])
+		formatString: "€"#,##0;("€"#,##0);"€"0
+		lineageTag: 3c6218e2-f79a-4c28-9844-3ec9e414c203
+
+	measure 'Total Discounts' = SUM(financials[Discounts])
+		formatString: "€"#,##0;("€"#,##0);"€"0
+		lineageTag: 5218d6ee-1ab9-42b7-84bc-8777fae5c204
+
+	measure 'Total Profit' = SUM(financials[Profit])
+		formatString: "€"#,##0;("€"#,##0);"€"0
+		lineageTag: 1ab8e541-efc8-47bc-ba79-11fa625bc205
+
+	measure 'Units Sold Qty' = SUM(financials[Units Sold])
+		formatString: #,##0
+		lineageTag: 48f9d0c2-e89a-48a6-8964-672ef4bcc206
+
+	measure 'Profit Margin %' = DIVIDE([Total Profit], [Total Sales], 0)
+		formatString: 0.0%
+		lineageTag: 673de83b-9a4f-4d37-9755-9a845bcc207
+
+	measure 'Average Sale Price' = AVERAGE(financials[Sale Price])
+		formatString: "€"#,##0.00;("€"#,##0.00);"€"0.00
+		lineageTag: 9fa281c3-2b0e-4361-9da2-21ea3456c208
+
+	measure 'Average Manufacturing Price' = AVERAGE(financials[Manufacturing Price])
+		formatString: "€"#,##0.00;("€"#,##0.00);"€"0.00
+		lineageTag: 8eb172a4-1a9f-4250-8cb1-10df2345c209
+
+	column Segment
+		dataType: string
+		lineageTag: c6f2846a-3b48-4ab5-a7ae-13b564922c3f
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 1d405bbc-3e5c-44d5-85aa-daed57d1f09b
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: cc6a17d9-39ee-48cc-9f67-0875d664ebb4
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Discount Band'
+		dataType: string
+		lineageTag: a5fc1976-9938-4436-a41e-71ceaaaee19d
+		summarizeBy: none
+		sourceColumn: Discount Band
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Units Sold'
+		dataType: double
+		lineageTag: 5eea917d-9fac-4709-b889-45a76c6aff03
+		summarizeBy: sum
+		sourceColumn: Units Sold
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Manufacturing Price'
+		dataType: int64
+		formatString: 0
+		lineageTag: acd19cf8-349b-43ae-a003-35cde5b29fc9
+		summarizeBy: sum
+		sourceColumn: Manufacturing Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sale Price'
+		dataType: int64
+		formatString: 0
+		lineageTag: 456ebd2d-6b6d-42f1-9183-99e54fe29b5b
+		summarizeBy: sum
+		sourceColumn: Sale Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Gross Sales'
+		dataType: double
+		lineageTag: 0c6b8a98-24a6-4d3e-ada9-1fe99fa14305
+		summarizeBy: sum
+		sourceColumn: Gross Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Discounts
+		dataType: double
+		lineageTag: 19d0de70-b4a0-449c-8743-579a4573f610
+		summarizeBy: sum
+		sourceColumn: Discounts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sales
+		dataType: double
+		lineageTag: 57ca0445-9d72-4a3a-b3bd-4086ebc44b1d
+		summarizeBy: sum
+		sourceColumn: Sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column COGS
+		dataType: double
+		lineageTag: 3bed6922-3de4-4265-b0d9-c5dfb509f33d
+		summarizeBy: sum
+		sourceColumn: COGS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Profit
+		dataType: double
+		lineageTag: 0aed77a6-81fa-489f-b4d5-938f1257b47a
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 899a4341-387b-4f76-974c-a8ed57e6e5a4
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variazione
+			isDefault
+			relationship: 2af247ff-49f6-462b-a658-953ce42bba63
+			defaultHierarchy: LocalDateTable_fcca8486-af8a-4fa1-8e1e-be305ff634e9.'Gerarchia data'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Month Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: b919247c-80a8-403e-b589-08fa2b840e67
+		summarizeBy: sum
+		sourceColumn: Month Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: 0fabea23-9b9d-4775-9944-f18615215b60
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b776afc-f873-4ec1-98b6-76019fd1d999
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition financials = m
+		mode: import
+		source =
+				let
+				 Source = Excel.Workbook(File.Contents("C:\Program Files\Microsoft Power BI Desktop\bin\SampleData\Financial Sample.xlsx"), null, true),
+				    financials_Table = Source{[Item="financials",Kind="Table"]}[Data],
+				    #"Modificato tipo" = Table.TransformColumnTypes(financials_Table,{{"Segment", type text}, {"Country", type text}, {"Product", type text}, {"Discount Band", type text}, {"Units Sold", type number}, {"Manufacturing Price", Int64.Type}, {"Sale Price", Int64.Type}, {"Gross Sales", type number}, {"Discounts", type number}, {"Sales", type number}, {"COGS", type number}, {"Profit", type number}, {"Date", type date}, {"Month Number", Int64.Type}, {"Month Name", type text}, {"Year", Int64.Type}})
+				in
+				 #"Modificato tipo"
+
+	annotation PBI_ResultType = Table
+
