@@ -1,32 +1,38 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "btnResetFilters",
   "position": {
-    "x": 1140,
-    "y": 28,
-    "z": 2,
-    "height": 32,
-    "width": 105,
-    "tabOrder": 3
+    "width": 1240,
+    "y": 12,
+    "z": 0,
+    "x": 20,
+    "tabOrder": 0,
+    "height": 46
   },
+  "name": "headerCountryBanner",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "visual": {
-    "visualType": "textbox",
     "objects": {
       "general": [
         {
           "properties": {
             "paragraphs": [
               {
-                "horizontalTextAlignment": "center",
                 "textRuns": [
                   {
-                    "value": "Reset Filters",
                     "textStyle": {
+                      "color": "#ffffff",
+                      "fontFamily": "Segoe UI Semibold",
                       "fontWeight": "bold",
-                      "fontSize": "9pt",
-                      "color": "#121316",
-                      "fontFamily": "Segoe UI Semibold"
-                    }
+                      "fontSize": "14pt"
+                    },
+                    "value": "ANALISI DATI PER PAESE"
+                  },
+                  {
+                    "textStyle": {
+                      "color": "#94a3b8",
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt"
+                    },
+                    "value": "   |   Performance Finanziaria, Margini e Quote per Mercato Nazionale"
                   }
                 ]
               }
@@ -36,13 +42,13 @@
       ]
     },
     "visualContainerObjects": {
-      "background": [
+      "dropShadow": [
         {
           "properties": {
-            "show": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'Outer'"
                 }
               }
             },
@@ -51,7 +57,31 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#C5A059'"
+                      "Value": "'#00000018'"
+                    }
+                  }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F172A'"
                     }
                   }
                 }
@@ -63,6 +93,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -70,10 +107,10 @@
       "border": [
         {
           "properties": {
-            "show": {
+            "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "8D"
                 }
               }
             },
@@ -82,16 +119,16 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E5C158'"
+                      "Value": "'#1E293B'"
                     }
                   }
                 }
               }
             },
-            "radius": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "true"
                 }
               }
             }
@@ -101,37 +138,38 @@
       "padding": [
         {
           "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
-                }
-              }
-            },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "16D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "16D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
                 }
               }
             }
           }
         }
       ]
-    }
+    },
+    "visualType": "textbox"
   }
 }

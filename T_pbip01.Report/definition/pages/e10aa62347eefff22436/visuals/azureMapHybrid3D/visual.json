@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "pieDarkProductDistribution",
+  "name": "azureMapHybrid3D",
   "position": {
-    "x": 742,
-    "y": 326,
+    "x": 15,
+    "y": 226,
     "z": 2,
-    "height": 366,
-    "width": 503,
+    "height": 482,
+    "width": 770,
     "tabOrder": 11
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "azureMap",
     "query": {
       "queryState": {
         "Category": {
@@ -23,16 +23,15 @@
                       "Entity": "financials"
                     }
                   },
-                  "Property": "Product"
+                  "Property": "Country"
                 }
               },
-              "queryRef": "financials.Product",
-              "nativeQueryRef": "Prodotto",
-              "active": true
+              "queryRef": "financials.Country",
+              "nativeQueryRef": "Paese"
             }
           ]
         },
-        "Y": {
+        "Size": {
           "projections": [
             {
               "field": {
@@ -46,83 +45,126 @@
                 }
               },
               "queryRef": "financials.Total Sales",
-              "nativeQueryRef": "Vendite"
+              "nativeQueryRef": "Volume Vendite"
+            }
+          ]
+        },
+        "Legend": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Segment"
+                }
+              },
+              "queryRef": "financials.Segment",
+              "nativeQueryRef": "Segmento"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Total Profit"
+                }
+              },
+              "queryRef": "financials.Total Profit",
+              "nativeQueryRef": "Profitto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Profit Margin %"
+                }
+              },
+              "queryRef": "financials.Profit Margin %",
+              "nativeQueryRef": "Margine %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Units Sold Qty"
+                }
+              },
+              "queryRef": "financials.Units Sold Qty",
+              "nativeQueryRef": "Unità Vendute"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Average Sale Price"
+                }
+              },
+              "queryRef": "financials.Average Sale Price",
+              "nativeQueryRef": "Prezzo Medio"
             }
           ]
         }
       }
     },
     "objects": {
-      "legend": [
+      "mapControl": [
         {
           "properties": {
-            "show": {
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'satellite_road-labels'"
+                }
+              }
+            },
+            "showZoomControl": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'RightCenter'"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#E2E8F0'"
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8.5D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
+            "showPitchControl": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "labelStyle": {
+            "showCompassControl": {
               "expr": {
                 "Literal": {
-                  "Value": "'Percent'"
+                  "Value": "true"
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
+            "showTraffic": {
               "expr": {
                 "Literal": {
-                  "Value": "8.5D"
+                  "Value": "true"
                 }
               }
             }
@@ -144,7 +186,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Annual Sales Distribution by Product'"
+                  "Value": "'Mappa Satellitare Ibrida HD & 3D Pitch Control (Azure Maps)'"
                 }
               }
             },
@@ -153,7 +195,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#38BDF8'"
                     }
                   }
                 }
@@ -162,7 +204,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10.5D"
+                  "Value": "11D"
                 }
               }
             },
@@ -191,7 +233,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#15171B'"
+                      "Value": "'#0F172A'"
                     }
                   }
                 }
@@ -222,7 +264,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D3728'"
+                      "Value": "'#0284C7'"
                     }
                   }
                 }
@@ -231,7 +273,38 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0078D420'"
+                    }
+                  }
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Outer'"
                 }
               }
             }

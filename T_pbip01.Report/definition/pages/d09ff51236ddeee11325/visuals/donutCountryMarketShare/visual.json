@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "slicerDarkCountry",
+  "name": "donutCountryMarketShare",
   "position": {
-    "x": 75,
-    "y": 240,
-    "z": 2,
-    "height": 72,
-    "width": 198,
-    "tabOrder": 7
+    "x": 515.52,
+    "y": 214.56,
+    "z": 11,
+    "height": 226.08,
+    "width": 360,
+    "tabOrder": 11
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "donutChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -27,94 +27,102 @@
                 }
               },
               "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
+              "nativeQueryRef": "Paese",
               "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Total Sales"
+                }
+              },
+              "queryRef": "financials.Total Sales",
+              "nativeQueryRef": "Vendite"
             }
           ]
         }
       }
     },
     "objects": {
-      "data": [
+      "legend": [
         {
           "properties": {
-            "mode": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'RightCenter'"
                 }
               }
-            }
-          }
-        }
-      ],
-      "header": [
-        {
-          "properties": {
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8.5D"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#334155'"
+                    }
+                  }
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#E5C158'"
-                    }
-                  }
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI Semibold'"
-                }
-              }
             }
           }
         }
       ],
-      "items": [
+      "labels": [
         {
           "properties": {
-            "fontColor": {
+            "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#1E293B'"
                     }
                   }
                 }
               }
             },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#15171B'"
-                    }
-                  }
-                }
-              }
-            },
-            "textSize": {
+            "labelStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "'Percent'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8.5D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -123,13 +131,13 @@
       ]
     },
     "visualContainerObjects": {
-      "background": [
+      "dropShadow": [
         {
           "properties": {
-            "show": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'Outer'"
                 }
               }
             },
@@ -138,7 +146,76 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#15171B'"
+                      "Value": "'#0000000D'"
+                    }
+                  }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F172A'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10.5D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Quota Vendite per Paese (%)'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -150,6 +227,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -157,10 +241,10 @@
       "border": [
         {
           "properties": {
-            "show": {
+            "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "8D"
                 }
               }
             },
@@ -169,16 +253,16 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#4A4230'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
               }
             },
-            "radius": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "true"
                 }
               }
             }
@@ -188,28 +272,28 @@
       "padding": [
         {
           "properties": {
-            "top": {
+            "left": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "8D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
-                }
-              }
-            },
-            "left": {
-              "expr": {
-                "Literal": {
                   "Value": "6D"
                 }
               }
             },
-            "right": {
+            "top": {
               "expr": {
                 "Literal": {
                   "Value": "6D"
@@ -219,6 +303,7 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   }
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "slicerDarkCountry",
+  "name": "slicerAiDiscountBand",
   "position": {
-    "x": 75,
-    "y": 240,
-    "z": 2,
+    "x": 774,
+    "y": 144,
+    "z": 1,
     "height": 72,
-    "width": 198,
-    "tabOrder": 7
+    "width": 238,
+    "tabOrder": 9
   },
   "visual": {
     "visualType": "slicer",
@@ -23,12 +23,11 @@
                       "Entity": "financials"
                     }
                   },
-                  "Property": "Country"
+                  "Property": "Discount Band"
                 }
               },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
-              "active": true
+              "queryRef": "financials.Discount Band",
+              "nativeQueryRef": "Fascia Sconto"
             }
           ]
         }
@@ -63,7 +62,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E5C158'"
+                      "Value": "'#38BDF8'"
                     }
                   }
                 }
@@ -105,7 +104,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#15171B'"
+                      "Value": "'#131B2E'"
                     }
                   }
                 }
@@ -138,7 +137,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#15171B'"
+                      "Value": "'#131B2E'"
                     }
                   }
                 }
@@ -169,7 +168,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#4A4230'"
+                      "Value": "'#1E293B'"
                     }
                   }
                 }
@@ -178,7 +177,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "8D"
                 }
               }
             }

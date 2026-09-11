@@ -1,78 +1,74 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "slicerDarkCountry",
+  "name": "kpiP4UnitsSold",
   "position": {
-    "x": 75,
-    "y": 240,
-    "z": 2,
-    "height": 72,
-    "width": 198,
-    "tabOrder": 7
+    "x": 1023.84,
+    "y": 128.59988033161187,
+    "z": 9,
+    "height": 77.76,
+    "width": 236.16,
+    "tabOrder": 9
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "card",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "financials"
                     }
                   },
-                  "Property": "Country"
+                  "Property": "Units Sold Qty"
                 }
               },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
-              "active": true
+              "queryRef": "financials.Units Sold Qty",
+              "nativeQueryRef": "UnitÃ  Vendute"
             }
           ]
         }
       }
     },
     "objects": {
-      "data": [
+      "labels": [
         {
           "properties": {
-            "mode": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F172A'"
+                    }
+                  }
                 }
               }
             }
           }
         }
       ],
-      "header": [
+      "categoryLabels": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
+            "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E5C158'"
+                      "Value": "'#7C3AED'"
                     }
                   }
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
                 }
               }
             },
@@ -82,39 +78,11 @@
                   "Value": "'Segoe UI Semibold'"
                 }
               }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
-                }
-              }
             },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#15171B'"
-                    }
-                  }
-                }
-              }
-            },
-            "textSize": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "true"
                 }
               }
             }
@@ -123,13 +91,13 @@
       ]
     },
     "visualContainerObjects": {
-      "background": [
+      "dropShadow": [
         {
           "properties": {
-            "show": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'Outer'"
                 }
               }
             },
@@ -138,7 +106,31 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#15171B'"
+                      "Value": "'#0000000A'"
+                    }
+                  }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -150,6 +142,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -157,10 +156,10 @@
       "border": [
         {
           "properties": {
-            "show": {
+            "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "8D"
                 }
               }
             },
@@ -169,50 +168,16 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#4A4230'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
               }
             },
-            "radius": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
-                }
-              }
-            },
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
+                  "Value": "true"
                 }
               }
             }

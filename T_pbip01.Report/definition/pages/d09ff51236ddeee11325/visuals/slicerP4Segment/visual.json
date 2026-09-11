@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "slicerDarkCountry",
+  "name": "slicerP4Segment",
   "position": {
-    "x": 75,
-    "y": 240,
+    "x": 335.52000000000004,
+    "y": 63.36,
     "z": 2,
-    "height": 72,
-    "width": 198,
-    "tabOrder": 7
+    "height": 64.8,
+    "width": 295.2,
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "financials"
                     }
                   },
-                  "Property": "Country"
+                  "Property": "Segment"
                 }
               },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
+              "queryRef": "financials.Segment",
+              "nativeQueryRef": "Filtro Segmento",
               "active": true
             }
           ]
@@ -51,10 +51,10 @@
       "header": [
         {
           "properties": {
-            "show": {
+            "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "9D"
                 }
               }
             },
@@ -63,12 +63,32 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E5C158'"
+                      "Value": "'#1E293B'"
                     }
                   }
                 }
               }
             },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
             "textSize": {
               "expr": {
                 "Literal": {
@@ -79,42 +99,18 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'Segoe UI Semibold'"
+                  "Value": "'Segoe UI'"
                 }
               }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
+            },
             "fontColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#1E293B'"
                     }
                   }
-                }
-              }
-            },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#15171B'"
-                    }
-                  }
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
                 }
               }
             }
@@ -123,13 +119,13 @@
       ]
     },
     "visualContainerObjects": {
-      "background": [
+      "dropShadow": [
         {
           "properties": {
-            "show": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'Outer'"
                 }
               }
             },
@@ -138,7 +134,31 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#15171B'"
+                      "Value": "'#0000000A'"
+                    }
+                  }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -150,6 +170,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -157,10 +184,10 @@
       "border": [
         {
           "properties": {
-            "show": {
+            "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "8D"
                 }
               }
             },
@@ -169,16 +196,16 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#4A4230'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
               }
             },
-            "radius": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "true"
                 }
               }
             }
@@ -188,10 +215,17 @@
       "padding": [
         {
           "properties": {
-            "top": {
+            "left": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "8D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             },
@@ -202,17 +236,10 @@
                 }
               }
             },
-            "left": {
+            "top": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
+                  "Value": "4D"
                 }
               }
             }

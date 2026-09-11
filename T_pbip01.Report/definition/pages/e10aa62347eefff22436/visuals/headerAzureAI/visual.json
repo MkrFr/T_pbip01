@@ -1,123 +1,44 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "slicerDarkCountry",
+  "name": "headerAzureAI",
   "position": {
-    "x": 75,
-    "y": 240,
-    "z": 2,
-    "height": 72,
-    "width": 198,
-    "tabOrder": 7
+    "x": 15,
+    "y": 10,
+    "z": 0,
+    "height": 50,
+    "width": 1250,
+    "tabOrder": 0
   },
   "visual": {
-    "visualType": "slicer",
-    "query": {
-      "queryState": {
-        "Values": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "financials"
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "AZURE MAPS NEXT-GEN & GEOSPATIAL AI HUB",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt",
+                      "color": "#38BDF8",
+                      "fontFamily": "Segoe UI Semibold"
                     }
                   },
-                  "Property": "Country"
-                }
-              },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
-              "active": true
-            }
-          ]
-        }
-      }
-    },
-    "objects": {
-      "data": [
-        {
-          "properties": {
-            "mode": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Dropdown'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "header": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#E5C158'"
+                  {
+                    "value": "   |   Mappa Ibrida Satellitare HD  •  3D Pitch & Compass  •  Geospatial AI Driver Analytics",
+                    "textStyle": {
+                      "fontWeight": "normal",
+                      "fontSize": "9.5pt",
+                      "color": "#94A3B8",
+                      "fontFamily": "Segoe UI"
                     }
                   }
-                }
+                ]
               }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI Semibold'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
-                }
-              }
-            },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#15171B'"
-                    }
-                  }
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
+            ]
           }
         }
       ]
@@ -138,7 +59,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#15171B'"
+                      "Value": "'#0F172A'"
                     }
                   }
                 }
@@ -169,7 +90,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#4A4230'"
+                      "Value": "'#0284C7'"
                     }
                   }
                 }
@@ -178,7 +99,38 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0078D425'"
+                    }
+                  }
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Outer'"
                 }
               }
             }
@@ -191,28 +143,28 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "8D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "8D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "16D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "16D"
                 }
               }
             }

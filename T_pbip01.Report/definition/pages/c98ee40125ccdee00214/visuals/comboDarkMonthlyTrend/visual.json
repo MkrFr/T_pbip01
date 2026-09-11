@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "financials.Date",
-              "nativeQueryRef": "Data"
+              "nativeQueryRef": "Data",
+              "active": true
             }
           ]
         },

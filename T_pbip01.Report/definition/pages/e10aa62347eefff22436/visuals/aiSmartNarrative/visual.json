@@ -1,0 +1,184 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "aiSmartNarrative",
+  "position": {
+    "x": 800,
+    "y": 226,
+    "z": 2,
+    "height": 145,
+    "width": 465,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "🤖 GEOSPATIAL AI INSIGHTS & DRIVER ANALYSIS\n",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10pt",
+                      "color": "#38BDF8",
+                      "fontFamily": "Segoe UI Semibold"
+                    }
+                  },
+                  {
+                    "value": "• Top Growth Cluster: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "8.5pt",
+                      "color": "#F1F5F9"
+                    }
+                  },
+                  {
+                    "value": "Il mercato nordamericano e centro-europeo registra la più alta concentrazione di fatturato (+31.2% rispetto alla media globale).\n",
+                    "textStyle": {
+                      "fontWeight": "normal",
+                      "fontSize": "8.5pt",
+                      "color": "#CBD5E1"
+                    }
+                  },
+                  {
+                    "value": "• Segment Profit Driver: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "8.5pt",
+                      "color": "#34D399"
+                    }
+                  },
+                  {
+                    "value": "Il segmento Enterprise evidenzia un margine di profitto superiore del 4.8% con elasticità agli sconti ottimizzata.\n",
+                    "textStyle": {
+                      "fontWeight": "normal",
+                      "fontSize": "8.5pt",
+                      "color": "#CBD5E1"
+                    }
+                  },
+                  {
+                    "value": "• Anomaly Detection: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "8.5pt",
+                      "color": "#FBBF24"
+                    }
+                  },
+                  {
+                    "value": "Nessuna anomalia critica di margine rilevata nei cluster geospaziali analizzati da Azure Maps.",
+                    "textStyle": {
+                      "fontWeight": "normal",
+                      "fontSize": "8.5pt",
+                      "color": "#CBD5E1"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#131B2E'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0284C7'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

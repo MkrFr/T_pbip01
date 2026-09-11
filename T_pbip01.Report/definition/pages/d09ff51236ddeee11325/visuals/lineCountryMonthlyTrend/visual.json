@@ -1,16 +1,15 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "pieDarkProductDistribution",
   "position": {
-    "x": 742,
-    "y": 326,
-    "z": 2,
-    "height": 366,
-    "width": 503,
-    "tabOrder": 11
+    "width": 480,
+    "y": 446,
+    "z": 13,
+    "x": 20,
+    "tabOrder": 13,
+    "height": 258
   },
+  "name": "lineCountryMonthlyTrend",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "visual": {
-    "visualType": "donutChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,12 +22,12 @@
                       "Entity": "financials"
                     }
                   },
-                  "Property": "Product"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "financials.Product",
-              "nativeQueryRef": "Prodotto",
-              "active": true
+              "nativeQueryRef": "Data",
+              "active": true,
+              "queryRef": "financials.Date"
             }
           ]
         },
@@ -45,8 +44,22 @@
                   "Property": "Total Sales"
                 }
               },
-              "queryRef": "financials.Total Sales",
-              "nativeQueryRef": "Vendite"
+              "nativeQueryRef": "Vendite",
+              "queryRef": "financials.Total Sales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Total Profit"
+                }
+              },
+              "nativeQueryRef": "Profitto",
+              "queryRef": "financials.Total Profit"
             }
           ]
         }
@@ -56,17 +69,17 @@
       "legend": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'RightCenter'"
+                  "Value": "'TopLeft'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8.5D"
                 }
               }
             },
@@ -75,45 +88,31 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E2E8F0'"
+                      "Value": "'#334155'"
                     }
                   }
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8.5D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
-            },
-            "labelStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Percent'"
-                }
-              }
-            },
-            "color": {
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "labelColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#64748B'"
                     }
                   }
                 }
@@ -123,6 +122,44 @@
               "expr": {
                 "Literal": {
                   "Value": "8.5D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#64748B'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8.5D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -131,20 +168,44 @@
       ]
     },
     "visualContainerObjects": {
-      "title": [
+      "dropShadow": [
         {
           "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Outer'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0000000D'"
+                    }
+                  }
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
-            },
-            "text": {
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'Annual Sales Distribution by Product'"
+                  "Value": "'Segoe UI Semibold'"
                 }
               }
             },
@@ -153,7 +214,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#0F172A'"
                     }
                   }
                 }
@@ -166,10 +227,17 @@
                 }
               }
             },
-            "fontFamily": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Segoe UI Semibold'"
+                  "Value": "'Trend Temporale: Vendite e Profitto'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -179,19 +247,12 @@
       "background": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#15171B'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -203,6 +264,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -210,10 +278,10 @@
       "border": [
         {
           "properties": {
-            "show": {
+            "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "8D"
                 }
               }
             },
@@ -222,16 +290,16 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D3728'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
               }
             },
-            "radius": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "true"
                 }
               }
             }
@@ -241,20 +309,6 @@
       "padding": [
         {
           "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
-                }
-              }
-            },
             "left": {
               "expr": {
                 "Literal": {
@@ -268,11 +322,26 @@
                   "Value": "8D"
                 }
               }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
             }
           }
         }
       ]
     },
+    "visualType": "lineChart",
     "drillFilterOtherVisuals": true
   }
 }

@@ -48,13 +48,6 @@
                 }
               }
             },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
             "fontFamily": {
               "expr": {
                 "Literal": {
@@ -83,13 +76,6 @@
                       "Value": "'#C5A059'"
                     }
                   }
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8.5D"
                 }
               }
             },

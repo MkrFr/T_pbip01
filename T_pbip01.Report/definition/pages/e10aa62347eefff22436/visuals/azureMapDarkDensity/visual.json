@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "slicerDarkCountry",
+  "name": "azureMapDarkDensity",
   "position": {
-    "x": 75,
-    "y": 240,
+    "x": 800,
+    "y": 382,
     "z": 2,
-    "height": 72,
-    "width": 198,
-    "tabOrder": 7
+    "height": 160,
+    "width": 465,
+    "tabOrder": 13
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "azureMap",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -27,28 +27,100 @@
                 }
               },
               "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
-              "active": true
+              "nativeQueryRef": "Paese"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Units Sold Qty"
+                }
+              },
+              "queryRef": "financials.Units Sold Qty",
+              "nativeQueryRef": "Unità Vendute"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Total Sales"
+                }
+              },
+              "queryRef": "financials.Total Sales",
+              "nativeQueryRef": "Fatturato"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Total Profit"
+                }
+              },
+              "queryRef": "financials.Total Profit",
+              "nativeQueryRef": "Profitto"
             }
           ]
         }
       }
     },
     "objects": {
-      "data": [
+      "mapControl": [
         {
           "properties": {
-            "mode": {
+            "style": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'grayscaleDark'"
+                }
+              }
+            },
+            "showZoomControl": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showPitchControl": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showCompassControl": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
           }
         }
-      ],
-      "header": [
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
             "show": {
@@ -58,21 +130,28 @@
                 }
               }
             },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Mappa di Concentrazione Volumi (Dark Theme Azure Maps)'"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E5C158'"
+                      "Value": "'#38BDF8'"
                     }
                   }
                 }
               }
             },
-            "textSize": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "10.5D"
                 }
               }
             },
@@ -86,43 +165,6 @@
           }
         }
       ],
-      "items": [
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
-                }
-              }
-            },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#15171B'"
-                    }
-                  }
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
       "background": [
         {
           "properties": {
@@ -138,7 +180,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#15171B'"
+                      "Value": "'#0F172A'"
                     }
                   }
                 }
@@ -169,7 +211,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#4A4230'"
+                      "Value": "'#0284C7'"
                     }
                   }
                 }
@@ -178,7 +220,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "8D"
                 }
               }
             }
@@ -191,34 +233,35 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "6D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "6D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "8D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "8D"
                 }
               }
             }
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   }
 }

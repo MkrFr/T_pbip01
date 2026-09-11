@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "financials.Segment",
-              "nativeQueryRef": "Segment"
+              "nativeQueryRef": "Segment",
+              "active": true
             }
           ]
         }
