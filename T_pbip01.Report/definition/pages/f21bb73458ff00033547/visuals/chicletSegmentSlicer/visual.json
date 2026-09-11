@@ -1,19 +1,19 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "slicerAiSegment",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "chicletSegmentSlicer",
   "position": {
-    "x": 268,
-    "y": 144,
+    "x": 20,
+    "y": 68,
     "z": 1,
-    "height": 72,
-    "width": 238,
-    "tabOrder": 7
+    "width": 630,
+    "height": 136,
+    "tabOrder": 1
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "ChicletSlicer1448559807354",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -31,17 +31,56 @@
               "active": true
             }
           ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Total Sales"
+                }
+              },
+              "queryRef": "financials.Total Sales",
+              "nativeQueryRef": "Vendite"
+            }
+          ]
         }
       }
     },
     "objects": {
-      "data": [
+      "general": [
         {
           "properties": {
-            "mode": {
+            "columns": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "5D"
+                }
+              }
+            },
+            "rows": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Horizontal'"
+                }
+              }
+            },
+            "multiselect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -58,12 +97,19 @@
                 }
               }
             },
+            "title": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segmenti di Mercato (Chiclet Slicer)'"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#38BDF8'"
+                      "Value": "'#0F172A'"
                     }
                   }
                 }
@@ -72,49 +118,64 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI Semibold'"
+                  "Value": "10D"
                 }
               }
             }
           }
         }
       ],
-      "items": [
+      "rows": [
         {
           "properties": {
-            "fontColor": {
+            "selectedColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#2563EB'"
                     }
                   }
                 }
               }
             },
-            "background": {
+            "unselectedColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#131B2E'"
+                      "Value": "'#F8FAFC'"
                     }
                   }
                 }
               }
             },
-            "textSize": {
+            "hoverColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E0E7FF'"
+                    }
+                  }
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#CBD5E1'"
+                    }
+                  }
+                }
+              }
+            },
+            "borderStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "'Rounded'"
                 }
               }
             }
@@ -126,19 +187,12 @@
       "background": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#131B2E'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -150,6 +204,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -157,19 +218,12 @@
       "border": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1E293B'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
@@ -181,38 +235,42 @@
                   "Value": "8D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
       ],
-      "padding": [
+      "dropShadow": [
         {
           "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0000000A'"
+                    }
+                  }
                 }
               }
             },
-            "bottom": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "'Outer'"
                 }
               }
             },
-            "left": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
+                  "Value": "true"
                 }
               }
             }

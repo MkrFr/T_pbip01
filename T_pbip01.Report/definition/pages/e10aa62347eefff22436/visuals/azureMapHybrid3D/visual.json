@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "azureMapHybrid3D",
   "position": {
     "x": 15,
@@ -27,25 +27,8 @@
                 }
               },
               "queryRef": "financials.Country",
-              "nativeQueryRef": "Paese"
-            }
-          ]
-        },
-        "Size": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "financials"
-                    }
-                  },
-                  "Property": "Total Sales"
-                }
-              },
-              "queryRef": "financials.Total Sales",
-              "nativeQueryRef": "Volume Vendite"
+              "nativeQueryRef": "Paese",
+              "active": true
             }
           ]
         },
@@ -64,6 +47,24 @@
               },
               "queryRef": "financials.Segment",
               "nativeQueryRef": "Segmento"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
+                  "Property": "Total Sales"
+                }
+              },
+              "queryRef": "financials.Total Sales",
+              "nativeQueryRef": "Volume Vendite"
             }
           ]
         },
@@ -128,49 +129,6 @@
           ]
         }
       }
-    },
-    "objects": {
-      "mapControl": [
-        {
-          "properties": {
-            "style": {
-              "expr": {
-                "Literal": {
-                  "Value": "'satellite_road-labels'"
-                }
-              }
-            },
-            "showZoomControl": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showPitchControl": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showCompassControl": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showTraffic": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "visualContainerObjects": {
       "title": [

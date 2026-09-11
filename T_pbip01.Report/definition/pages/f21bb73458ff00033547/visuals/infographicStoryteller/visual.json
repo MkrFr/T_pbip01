@@ -1,16 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "chartGeoAiPerformance",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "infographicStoryteller",
   "position": {
-    "x": 800,
-    "y": 552,
-    "z": 2,
-    "height": 156,
-    "width": 465,
-    "tabOrder": 14
+    "x": 20,
+    "y": 308,
+    "z": 8,
+    "width": 735,
+    "height": 395,
+    "tabOrder": 8
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "PBI_CV_73744D90_4DC9_4F18_8BA5_EE8FA5C98035",
     "query": {
       "queryState": {
         "Category": {
@@ -32,7 +32,7 @@
             }
           ]
         },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -46,121 +46,61 @@
                 }
               },
               "queryRef": "financials.Total Sales",
-              "nativeQueryRef": "Fatturato"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "financials"
-                    }
-                  },
-                  "Property": "Total Profit"
-                }
-              },
-              "queryRef": "financials.Total Profit",
-              "nativeQueryRef": "Utile Netto"
+              "nativeQueryRef": "Vendite Totali"
             }
           ]
         }
       }
     },
     "objects": {
-      "categoryAxis": [
+      "Chart": [
         {
           "properties": {
-            "show": {
+            "Type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'bar'"
+                }
+              }
+            },
+            "useThemeColors": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#94A3B8'"
-                    }
-                  }
+            "X-Axis": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
-            "fontSize": {
+            "Y-Axis": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "true"
+                }
+              }
+            },
+            "Format Data Value": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
           }
         }
       ],
-      "valueAxis": [
+      "Small-Multiple": [
         {
           "properties": {
-            "show": {
+            "Show Chart Title": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#94A3B8'"
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'TopLeft'"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#CBD5E1'"
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
                 }
               }
             }
@@ -182,7 +122,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Confronto Redditività e Ricavi Regionali'"
+                  "Value": "'Storytelling Vendite per Paese (Infographic Designer)'"
                 }
               }
             },
@@ -191,7 +131,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#38BDF8'"
+                      "Value": "'#0F172A'"
                     }
                   }
                 }
@@ -200,7 +140,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10.5D"
+                  "Value": "11D"
                 }
               }
             },
@@ -217,19 +157,12 @@
       "background": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0F172A'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -241,6 +174,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -248,19 +188,12 @@
       "border": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0284C7'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
@@ -272,45 +205,48 @@
                   "Value": "8D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
       ],
-      "padding": [
+      "dropShadow": [
         {
           "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0000000A'"
+                    }
+                  }
                 }
               }
             },
-            "bottom": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "'Outer'"
                 }
               }
             },
-            "left": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
+                  "Value": "true"
                 }
               }
             }
           }
         }
       ]
-    },
-    "drillFilterOtherVisuals": true
+    }
   }
 }

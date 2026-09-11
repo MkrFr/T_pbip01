@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "azureMapDarkDensity",
   "position": {
     "x": 800,
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "financials.Country",
-              "nativeQueryRef": "Paese"
+              "nativeQueryRef": "Paese",
+              "active": true
             }
           ]
         },
@@ -82,42 +83,6 @@
           ]
         }
       }
-    },
-    "objects": {
-      "mapControl": [
-        {
-          "properties": {
-            "style": {
-              "expr": {
-                "Literal": {
-                  "Value": "'grayscaleDark'"
-                }
-              }
-            },
-            "showZoomControl": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showPitchControl": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showCompassControl": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "visualContainerObjects": {
       "title": [

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "slicerAiDiscountBand",
   "position": {
     "x": 774,
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "financials.Discount Band",
-              "nativeQueryRef": "Fascia Sconto"
+              "nativeQueryRef": "Fascia Sconto",
+              "active": true
             }
           ]
         }

@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "headerAzureAI",
+  "name": "headerBanner",
   "position": {
-    "x": 15,
-    "y": 10,
+    "x": 20,
+    "y": 12,
     "z": 0,
-    "height": 50,
-    "width": 1250,
+    "width": 1240,
+    "height": 48,
     "tabOrder": 0
   },
   "visual": {
@@ -19,22 +19,21 @@
               {
                 "textRuns": [
                   {
-                    "value": "AZURE MAPS NEXT-GEN & GEOSPATIAL AI HUB",
                     "textStyle": {
+                      "color": "#ffffff",
+                      "fontFamily": "Segoe UI Semibold",
                       "fontWeight": "bold",
-                      "fontSize": "14pt",
-                      "color": "#38BDF8",
-                      "fontFamily": "Segoe UI Semibold"
-                    }
+                      "fontSize": "13pt"
+                    },
+                    "value": "VISUAL DISCOVERY & STORYTELLING"
                   },
                   {
-                    "value": "   |   Mappa Ibrida Satellitare HD  •  3D Pitch & Compass  •  Geospatial AI Driver Analytics",
                     "textStyle": {
-                      "fontWeight": "normal",
-                      "fontSize": "9.5pt",
-                      "color": "#94A3B8",
-                      "fontFamily": "Segoe UI"
-                    }
+                      "color": "#94a3b8",
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10pt"
+                    },
+                    "value": "   |   Filtri Avanzati Chiclet, Ricerca Testuale Dinamica e Storytelling Infografico"
                   }
                 ]
               }
@@ -47,13 +46,6 @@
       "background": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
@@ -71,6 +63,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -78,19 +77,12 @@
       "border": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0284C7'"
+                      "Value": "'#1E293B'"
                     }
                   }
                 }
@@ -102,6 +94,13 @@
                   "Value": "8D"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -109,19 +108,12 @@
       "dropShadow": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0078D425'"
+                      "Value": "'#00000018'"
                     }
                   }
                 }
@@ -133,38 +125,11 @@
                   "Value": "'Outer'"
                 }
               }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
             },
-            "bottom": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
+                  "Value": "true"
                 }
               }
             }
